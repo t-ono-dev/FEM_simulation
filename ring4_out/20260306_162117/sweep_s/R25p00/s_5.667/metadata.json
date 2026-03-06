@@ -1,0 +1,29 @@
+{
+  "V_c": 0.025851999786435535,
+  "Feenstra": true,
+  "ndof": 7826,
+  "fes": "H1",
+  "order": 1,
+  "materials": [
+    "sic",
+    "sio2",
+    "vac"
+  ],
+  "boundaries": [
+    "axis",
+    "sic/sio2",
+    "far-field",
+    "ground",
+    "axis",
+    "far-field",
+    "sio2/vacuum",
+    "axis",
+    "tip",
+    "tip",
+    "tip",
+    "tip",
+    "tip",
+    "top",
+    "far-field"
+  ]
+}
