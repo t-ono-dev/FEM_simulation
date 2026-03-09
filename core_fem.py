@@ -457,7 +457,7 @@ def solve_with_homotopy(a, u, fes, msh, homotopy_charge, homotopy_sigma):
         freedofs &= ~fes.GetDofs(msh.Boundaries("tip"))
 
         newton_kwargs = dict(
-            freedofs=freedofs, maxit=50, maxerr=1e-11,
+            freedofs=freedofs, maxit=100, maxerr=5e-11,
             inverse="sparsecholesky", dampfactor=0.7, printing=False
         )
 
