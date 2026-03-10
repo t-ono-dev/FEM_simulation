@@ -1,10 +1,10 @@
 ring1/2
-python run_RVtip_sweep.py --out_root RV_out --Vtip_list 0 8 300 --s_fixed 8 --CPD 0.6 --tip_radius 46 --sampLe_z_nm -5 --model Feenstra --fermi_np aymerich_humet --levels_list 0.189 0.199 --levels_range -0.10 0.3 0.01
+python run_RVtip_sweep.py --out_root RV_out --Vtip_list 0 6.5 300 --s_fixed 8 --CPD 0.6 --tip_radius 46 --sampLe_z_nm -5 --model Feenstra --fermi_np aymerich_humet --levels_list 0.189 0.199 --levels_range -0.10 0.3 0.001
 
-python run_Rs_sweep.py --out_root Rs_out --s_list 3 25 300 --Vtip_fixed 4 --CPD 0.6 --tip_radius 46 --sampLe_z_nm -5 --model Feenstra --fermi_np aymerich_humet --levels_list 0.189 0.199 --levels_range -0.10 0.3 0.01
+python run_Rs_sweep.py --out_root Rs_out --s_list 3 25 300 --Vtip_fixed 4 --CPD 0.6 --tip_radius 46 --sampLe_z_nm -5 --model Feenstra --fermi_np aymerich_humet --levels_list 0.189 0.199 --levels_range -0.10 0.3 0.001
 
 
 ring3
-python run_RVtip_sweep.py --out_root RV_out --Vtip_list -8 2 300 --s_fixed 8 --CPD 0.6 --tip_radius 46 --sampLe_z_nm -5 --model Feenstra --fermi_np aymerich_humet --levels_list 0.067 --levels_range -0.10 0.16 0.01
+python run_RVtip_sweep.py --out_root RV_out --Vtip_list -8 2 300 --s_fixed 8 --CPD 0.6 --tip_radius 46 --sampLe_z_nm -5 --model Feenstra --fermi_np aymerich_humet --levels_list 0.067 --levels_range -0.10 0.16 0.001
 
-python run_Rs_sweep.py --out_root Rs_out --s_list 3 25 300 --Vtip_fixed -2 --CPD 0.6 --tip_radius 46 --sampLe_z_nm -5 --model Feenstra --fermi_np aymerich_humet --levels_list 0.067 --levels_range -0.10 0.16 0.01
+python run_Rs_sweep.py --out_root Rs_out --s_list 3 25 300 --Vtip_fixed -2 --CPD 0.6 --tip_radius 46 --sampLe_z_nm -5 --model Feenstra --fermi_np aymerich_humet --levels_list 0.067 --levels_range -0.10 0.16 0.001

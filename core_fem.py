@@ -457,7 +457,7 @@ def solve_with_homotopy(a, u, fes, msh, homotopy_charge, homotopy_sigma):
         freedofs &= ~fes.GetDofs(msh.Boundaries("tip"))
 
         newton_kwargs = dict(
-            freedofs=freedofs, maxit=100, maxerr=5e-11,
+            freedofs=freedofs, maxit=50, maxerr=1e-11,
             inverse="sparsecholesky", dampfactor=0.7, printing=False
         )
 
@@ -640,7 +640,7 @@ def rmse_interp_x_to_y(model_x, model_y, exp_x, exp_y, w=None, min_valid=6):
     w_use = None if w is None else np.asarray(w, float)[m_exp][mfin]
     return weighted_rmse(exp_y[m_exp][mfin], y_on[mfin], w=w_use, min_valid=min_valid)
 
-def build_symmetric_R_csv(path, x_vals, R_vals):
+def build_symmetric_R_csv(path, x_vals, R_vals, levels):
     records = []
     for xv, rv in zip(x_vals, R_vals):
         if not (np.isfinite(xv) and np.isfinite(rv)):
@@ -653,5 +653,5 @@ def build_symmetric_R_csv(path, x_vals, R_vals):
         arr = arr[np.argsort(arr[:,0])]
         with open(path, "w", newline="") as f:
             w = csv.writer(f)
-            w.writerow(["R (nm)", "x (unit)"])
+            w.writerow([f"R (nm)_{levels:.3f}", f"x (unit)_{levels:.3f}"])
             w.writerows(arr.tolist())

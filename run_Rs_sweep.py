@@ -128,7 +128,7 @@ def main(argv=None):
                 w.writerow(["s (nm)", f"R (nm) @ {levf:.3f} V"])
                 for s, R in zip(s_vals, R_dict[levf]):
                     w.writerow([s, R])
-            build_symmetric_R_csv(Path(run_dir)/f"{stamp}_R_vs_s_{levf:.3f}V_SYMM.csv", s_vals, R_dict[levf])
+            build_symmetric_R_csv(Path(run_dir)/f"{stamp}_R_vs_s_{levf:.3f}V_SYMM.csv", s_vals, R_dict[levf], levf)
 
         fig, ax = plt.subplots(figsize=(6,4))
         exp_path = Path("exp_data_z_ring3_Vtip-.csv")
