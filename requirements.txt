@@ -1,3 +1,0 @@
-PySide6>=6.6
-bibtexparser>=1.4
-pypdf>=4.0
